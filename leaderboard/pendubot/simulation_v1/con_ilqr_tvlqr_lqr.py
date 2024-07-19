@@ -20,7 +20,7 @@ leaderboard_config = {"csv_path": name + "/sim_swingup.csv",
 traj_model = "model_2.1"
 
 ## trajectory parameters
-csv_path = os.path.join("../../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv")
+csv_path = os.path.join("/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv")
 
 
 ## controller parameters

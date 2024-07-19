@@ -22,7 +22,7 @@ if robot == "pendubot":
     torque_limit = [5.0, 0.0]
     active_act = 0
 
-model_par_path = "../../data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
 mpar = model_parameters()
 mpar.load_yaml(model_par_path)
 mpar.set_motor_inertia(0.)
@@ -58,7 +58,7 @@ init_pars = [0.1, 0., 0., 0., 0., 100., 100., 10., 10.]
 # swingup parameters
 start = [0.0, 0.0, 0.0, 0.0]
 goal = [np.pi, 0, 0, 0]
-init_csv_path = os.path.join("../../data/trajectories/", design, traj_model, robot, "ilqr_1/trajectory.csv")
+init_csv_path = os.path.join("/home/astik/double_pendulum/data/trajectories/", design, traj_model, robot, "ilqr_1/trajectory.csv")
 
 # optimization parameters
 optimization_method = "cma"  # "Nelder-Mead"

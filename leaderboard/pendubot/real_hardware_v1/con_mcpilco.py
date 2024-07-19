@@ -12,7 +12,7 @@ controlled_joint = [0, 1]
 dt_con = 1. / 33.  # 33 Hz
 
 policy_par_path = (
-    "../../../data/policies/"
+    "/home/astik/double_pendulum/data/policies/"
     + design
     + "/"
     + model

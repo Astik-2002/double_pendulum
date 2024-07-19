@@ -44,14 +44,14 @@ class ReplayBuffer:
         if self.idx >= self.max_size:
             self.idx = 0
 
-    def sample_random_batch(self, sample_key: jax.random.PRNGKeyArray) -> Dict[str, jnp.ndarray]:
+    def sample_random_batch(self, sample_key: jax.random.key(0)) -> Dict[str, jnp.ndarray]:
         idxs = self.get_sample_indexes(sample_key, self.len)
         return self.create_batch(
             self.states[idxs], self.actions[idxs], self.rewards[idxs], self.next_states[idxs], self.absorbings[idxs]
         )
 
     @partial(jax.jit, static_argnames="self")
-    def get_sample_indexes(self, key: jax.random.PRNGKeyArray, maxval: int) -> jnp.ndarray:
+    def get_sample_indexes(self, key: jax.random.key(0), maxval: int) -> jnp.ndarray:
         return jax.random.randint(key, shape=(self.batch_size,), minval=0, maxval=maxval)
 
     @staticmethod

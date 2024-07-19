@@ -1,0 +1,15 @@
+cfric1: 0.093
+cfric2: 0.186
+com1: 0.275
+com2: 0.166
+damping1: 0.081
+damping2: 0.0
+gravity: 9.81
+inertia1: 0.05472
+inertia2: 0.02522
+length1: 0.3
+length2: 0.2
+mass1: 0.608
+mass2: 0.63
+torque_limit1: 10.0
+torque_limit2: 10.0

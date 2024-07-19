@@ -41,7 +41,7 @@ controlled_joint = [0]
 switch_stabilization = True
 
 policy_par_path = (
-    "../../../data/policies/"
+    "/home/astik/double_pendulum/data/policies/"
     + design
     + "/"
     + model

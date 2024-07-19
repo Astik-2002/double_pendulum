@@ -13,14 +13,14 @@ from double_pendulum.filter.lowpass import lowpass_filter
 
 SAVE = "save" in sys.argv
 PLOT = "plot" in sys.argv
-ANIMATE = "animate" in sys.argv
-
+#ANIMATE = "animate" in sys.argv
+ANIMATE = True
 # model parameters
 design = "design_A.0"
 model = "model_2.0"
 robot = "pendubot"
 
-urdf_path = "../../data/urdfs/design_A.0/model_1.0/" + robot + ".urdf"
+urdf_path = "/home/astik/double_pendulum/data/urdfs/design_A.0/model_1.0/" + robot + ".urdf"
 friction_compensation = True
 
 if robot == "pendubot":
@@ -34,7 +34,7 @@ else:
     active_act = 1
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model

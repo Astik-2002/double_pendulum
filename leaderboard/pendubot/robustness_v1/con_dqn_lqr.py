@@ -34,7 +34,7 @@ dynamics_func = double_pendulum_dynamics_func(
     torque_limit=torque_limit,
 )
 
-experiment_path = "../../../data/policies/design_A.0/model_2.0/pendubot/DQN/"
+experiment_path = "/home/astik/double_pendulum/data/policies/design_A.0/model_2.0/pendubot/DQN/"
 env = get_environment(9)
 controller1 = DQNController(
     experiment_path,

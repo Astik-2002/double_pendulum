@@ -13,7 +13,7 @@ design = "design_A.0"
 model = "model_2.0"
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -26,7 +26,7 @@ mpar.load_yaml(model_par_path)
 
 # trajectory
 csv_path = (
-    "../../data/system_identification/excitation_trajectories/trajectory-pos-50.csv"
+    "/home/astik/double_pendulum/data/system_identification/excitation_trajectories/trajectory-pos-50.csv"
 )
 with_tau = False
 num_break = 250

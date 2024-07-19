@@ -7,7 +7,7 @@ from double_pendulum.analysis.benchmark_scores import get_scores
 design = "design_C.0"
 model = "model_3.1"
 
-data_dir = "../../data/benchmarks"
+data_dir = "/home/astik/double_pendulum/data/benchmarks"
 
 scores = []
 titles = []

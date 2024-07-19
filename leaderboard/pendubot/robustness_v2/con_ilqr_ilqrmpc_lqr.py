@@ -50,7 +50,7 @@ trajectory_stabilization = True
 shifting = 1
 
 init_csv_path = os.path.join(
-    "../../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 sCu = [0.1, 0.1]

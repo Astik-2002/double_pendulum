@@ -16,8 +16,7 @@ from double_pendulum.controller.trajectory_following.trajectory_controller impor
 design = "design_A.0"
 model = "model_1.0"
 robot = "acrobot"
-
-urdf_path = "../../data/urdfs/design_A.0/model_1.0/"+robot+".urdf"
+urdf_path = "/home/astik/double_pendulum/data/urdfs/design_A.0/model_1.0/"+robot+".urdf"
 
 torque_limit_active = 6.0
 if robot == "acrobot":
@@ -27,7 +26,7 @@ if robot == "pendubot":
 if robot == "double_pendulum":
     torque_limit = [torque_limit_active, torque_limit_active]
 
-model_par_path = "../../data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
 mpar = model_parameters()
 mpar.load_yaml(model_par_path)
 mpar.set_motor_inertia(0.)
@@ -92,29 +91,29 @@ plot_timeseries(T, X, U, None,
                 tau_y_lines=[-torque_limit_active, torque_limit_active],
                 save_to=os.path.join(save_dir, "timeseries"))
 
-# # animate
-# # animation with meshcat in browser window
-# dc.animate_trajectory()
+# animate
+# animation with meshcat in browser window
+dc.animate_trajectory()
 # 
-# # simulate in python plant
-# dt = T[1] - T[0]
-# t_final = T[-1]
-# x0 = X[0]
-# 
-# plant = SymbolicDoublePendulum(model_pars=mpar)
-# sim = Simulator(plant=plant)
-# 
-# controller = TrajectoryController(csv_path=traj_file,
-#                                   torque_limit=torque_limit,
-#                                   kK_stabilization=False)
-# controller.init()
-# 
-# T, X, U = sim.simulate_and_animate(t0=0.0, x0=x0,
-#                                    tf=t_final, dt=dt, controller=controller,
-#                                    integrator="runge_kutta",
-#                                    plot_inittraj=True)
-# 
-# plot_timeseries(T, X, U, None,
-#                 plot_energy=False,
-#                 pos_y_lines=[0.0, np.pi],
-#                 tau_y_lines=[-torque_limit_active, torque_limit_active])
+# simulate in python plant
+dt = T[1] - T[0]
+t_final = T[-1]
+x0 = X[0]
+ 
+plant = SymbolicDoublePendulum(model_pars=mpar)
+sim = Simulator(plant=plant)
+ 
+controller = TrajectoryController(csv_path=traj_file,
+                                   torque_limit=torque_limit,
+                                   kK_stabilization=False)
+controller.init()
+ 
+T, X, U = sim.simulate_and_animate(t0=0.0, x0=x0,
+                                    tf=t_final, dt=dt, controller=controller,
+                                    integrator="runge_kutta",
+                                    plot_inittraj=True)
+ 
+plot_timeseries(T, X, U, None,
+                 plot_energy=False,
+                 pos_y_lines=[0.0, np.pi],
+                 tau_y_lines=[-torque_limit_active, torque_limit_active])

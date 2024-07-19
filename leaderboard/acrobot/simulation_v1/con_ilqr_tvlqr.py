@@ -31,7 +31,7 @@ traj_model = "model_3.1"
 
 ## trajectory parameters
 csv_path = os.path.join(
-    "../../../data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv"
 )
 
 

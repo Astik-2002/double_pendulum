@@ -15,7 +15,7 @@ from double_pendulum.utils.csv_trajectory import load_trajectory, trajectory_pro
 from double_pendulum.filter.lowpass import lowpass_filter
 
 PLOT = "plot" in sys.argv
-ANIMATE = "animate" in sys.argv
+ANIMATE = True
 
 design = "design_C.0"
 model = "model_3.0"
@@ -32,7 +32,7 @@ else:
     torque_limit = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -43,7 +43,7 @@ mpar = model_parameters(filepath=model_par_path)
 # csv file
 use_feed_forward_torque = True
 csv_path = os.path.join(
-    "../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 T_des, X_des, U_des = load_trajectory(csv_path)

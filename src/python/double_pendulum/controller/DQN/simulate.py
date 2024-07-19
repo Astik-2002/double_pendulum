@@ -24,7 +24,7 @@ def simulate(experiment_path, actions):
         active_act = 0
         Q = 3.0 * np.diag([0.64, 0.64, 0.1, 0.1])
         R = np.eye(2) * 0.82
-        load_path = "lqr_data/pendubot/lqr/roa"
+        load_path = "/home/astik/double_pendulum/examples/reinforcement_learning/DQN/lqr_data/pendubot/lqr/roa"
 
     elif robot == "acrobot":
         design = "design_C.0"
@@ -33,11 +33,11 @@ def simulate(experiment_path, actions):
         active_act = 1
         Q = np.diag((0.97, 0.93, 0.39, 0.26))
         R = np.diag((0.11, 0.11))
-        load_path = "lqr_data/acrobot/lqr/roa"
+        load_path = "/home/astik/double_pendulum/examples/reinforcement_learning/DQN/lqr_data/acrobot/lqr/roa"
 
     # import model parameter
     model_par_path = (
-        "../../../data/system_identification/identified_parameters/" + design + "/" + model + "/model_parameters.yml"
+        "/home/astik/double_pendulum/data/system_identification/identified_parameters/" + design + "/" + model + "/model_parameters.yml"
     )
     mpar = model_parameters(filepath=model_par_path)
 

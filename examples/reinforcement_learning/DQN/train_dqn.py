@@ -13,8 +13,8 @@ from double_pendulum.controller.DQN.environment import get_environment
 from double_pendulum.controller.DQN.simulate import simulate
 
 
-def train(argvs) -> None:
-    experiment_path = f"experiments/{argvs[0]}/"
+def train():
+    experiment_path = f"/home/astik/double_pendulum/examples/reinforcement_learning/DQN/"
     if not os.path.exists(experiment_path):
         os.makedirs(experiment_path)
     if not os.path.exists(experiment_path + "parameters.json"):
@@ -100,4 +100,4 @@ def train(argvs) -> None:
 
 
 if __name__ == "__main__":
-    train(sys.argv[1:])
+    train()

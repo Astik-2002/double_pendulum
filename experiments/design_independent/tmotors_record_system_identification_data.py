@@ -6,8 +6,8 @@ from double_pendulum.experiments.hardware_control_loop_tmotors import run_experi
 
 design = "design_A.0"
 
-# excitation_traj_csv = "../../data/system_identification/excitation_trajectories/trajectory-pos-20.csv"
-excitation_traj_csv = "../../data/trajectories/acrobot/ilqr_v1.0/trajectory.csv"
+# excitation_traj_csv = "/home/astik/double_pendulum/data/system_identification/excitation_trajectories/trajectory-pos-20.csv"
+excitation_traj_csv = "/home/astik/double_pendulum/data/trajectories/acrobot/ilqr_v1.0/trajectory.csv"
 
 data = pd.read_csv(excitation_traj_csv)
 time_traj = np.asarray(data["time"])

@@ -4,7 +4,7 @@ from double_pendulum.utils.pcw_polynomial import FitPiecewisePolynomial
 from double_pendulum.utils.csv_trajectory import load_trajectory
 
 
-init_csv_path = "../../data/trajectories/design_A.0/model_1.1/acrobot/ilqr_1/trajectory.csv"
+init_csv_path = "/home/astik/double_pendulum/data/trajectories/design_A.0/model_1.1/acrobot/ilqr_1/trajectory.csv"
 T, X, U = load_trajectory(init_csv_path)
 
 t1 = 1.2

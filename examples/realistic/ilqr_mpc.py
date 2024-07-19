@@ -23,7 +23,7 @@ ANIMATE = "animate" in sys.argv
 design = "design_C.0"
 model = "model_3.0"
 traj_model = "model_3.1"
-robot = "acrobot"
+robot = "pendubot"
 
 friction_compensation = True
 
@@ -36,7 +36,7 @@ else:
     torque_limit = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -91,7 +91,7 @@ shifting = 1
 
 # trajectory parameters
 init_csv_path = os.path.join(
-    "../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 if robot == "acrobot":
@@ -224,29 +224,20 @@ if friction_compensation:
 
 controller.init()
 
-if ANIMATE:
-    T, X, U = sim.simulate_and_animate(
-        t0=0.0,
-        x0=start,
-        tf=t_final,
-        dt=dt,
-        controller=controller,
-        integrator=integrator,
-        plot_inittraj=True,
-        plot_forecast=True,
-        save_video=False,
-        video_name=os.path.join(save_dir, "simulation"),
-        anim_dt=0.02,
-    )
-else:
-    T, X, U = sim.simulate(
-        t0=0.0,
-        x0=start,
-        tf=t_final,
-        dt=dt,
-        controller=controller,
-        integrator=integrator,
-    )
+
+T, X, U = sim.simulate_and_animate(
+    t0=0.0,
+    x0=start,
+    tf=t_final,
+    dt=dt,
+    controller=controller,
+    integrator=integrator,
+    plot_inittraj=True,
+    plot_forecast=True,
+    save_video=False,
+    video_name=os.path.join(save_dir, "simulation"),
+    anim_dt=0.02,
+)
 
 # saving and plotting
 save_plot_to = None

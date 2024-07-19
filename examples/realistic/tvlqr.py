@@ -24,16 +24,16 @@ from double_pendulum.simulation.perturbations import (
 
 SAVE = "save" in sys.argv
 PLOT = "plot" in sys.argv
-ANIMATE = "animate" in sys.argv
+ANIMATE = True
 
 # model parameters
 design = "design_C.0"
 model = "model_3.0"
 traj_model = "model_3.1"
-robot = "pendubot"
+robot = "acrobot"
 
 friction_compensation = True
-stabilization = "lqr"
+stabilization = "pid"
 
 if robot == "pendubot":
     torque_limit = [5.0, 0.0]
@@ -47,7 +47,7 @@ else:
 torque_limit_pid = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -64,7 +64,7 @@ mpar_con.set_torque_limit(torque_limit)
 
 ## load reference trajectory
 csv_path = os.path.join(
-    "../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 T_des, X_des, U_des = load_trajectory(csv_path)
 
@@ -97,7 +97,9 @@ filter_velocity_cut = 0.1
 
 ## controller parameters
 if robot == "acrobot":
-    Q = np.diag([0.64, 0.56, 0.13, 0.067])
+    Q = np.diag([1.5, 1.5, 0.13, 0.067])
+    Q = np.diag([0.64, 0.56, 0.13, 0.037])
+
     R = np.eye(2) * 0.82
 elif robot == "pendubot":
     # Q = np.diag([0.64, 0.64, 0.4, 0.2])
@@ -113,13 +115,14 @@ Qf = np.copy(Q)
 ## PID controller
 Kp = 10.0
 Ki = 0.0
-Kd = 0.1
+Kd = 0.5
 
 ## lqr controller
 if robot == "acrobot":
     # Q_lqr = np.diag((0.97, 0.93, 0.39, 0.26))
     # R_lqr = np.diag((1.1, 1.1))
-    Q_lqr = 0.1 * np.diag([0.65, 0.00125, 93.36, 0.000688])
+    #Q_lqr = 0.1 * np.diag([0.65, 0.00125, 93.36, 0.000688])
+    Q_lqr = np.diag([0.64, 0.56, 0.13, 0.037])
     R_lqr = 100.0 * np.diag((0.025, 0.025))
 elif robot == "pendubot":
     Q_lqr = np.diag([0.0125, 6.5, 6.88, 9.36])
@@ -139,7 +142,7 @@ regu_init = 1.0
 max_regu = 10000.0
 min_regu = 0.01
 break_cost_redu = 1e-6
-trajectory_stabilization = False
+trajectory_stabilization = True
 shifting = 1
 sCu = [0.0001, 0.0001]
 sCp = [0.1, 0.1]

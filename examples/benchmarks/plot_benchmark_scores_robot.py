@@ -12,7 +12,7 @@ scores = []
 titles = []
 
 # data_dir = "data"
-data_dir = "../../data/benchmarks"
+data_dir = "/home/astik/double_pendulum/data/benchmarks"
 
 # tvlqr
 results_dir = os.path.join(data_dir, design, model, robot, "tvlqr_drake")

@@ -35,7 +35,7 @@ n_dof = 2
 controlled_joint = [0, 1]
 
 policy_par_path = (
-    "../../../data/policies/"
+    "/home/astik/double_pendulum/data/policies/"
     + design
     + "/"
     + model

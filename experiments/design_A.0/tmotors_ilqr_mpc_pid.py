@@ -20,7 +20,7 @@ torque_limit = [0.0, 6.0]
 torque_limit_pid = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -35,7 +35,7 @@ mpar.set_torque_limit(torque_limit)
 
 # trajectory parameters
 csv_path = os.path.join(
-    "../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 T, X, U = load_trajectory(csv_path, True)
@@ -127,7 +127,7 @@ controller = CombinedController(
 
 # gravity and friction compensation
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model

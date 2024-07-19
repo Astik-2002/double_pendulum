@@ -17,7 +17,7 @@ design = "design_A.0"
 model = "model_2.1"
 robot = "pendubot"
 
-urdf_path = "../../data/urdfs/design_A.0/model_1.0/" + robot + ".urdf"
+urdf_path = "/home/astik/double_pendulum/data/urdfs/design_A.0/model_1.0/" + robot + ".urdf"
 
 if robot == "acrobot":
     torque_limit = [0.0, 6.0]
@@ -27,7 +27,7 @@ else:
     torque_limit = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model[:-1]
@@ -46,7 +46,7 @@ goal = [np.pi, 0.0, 0.0, 0.0]
 
 # init trajectory
 init_csv_path = os.path.join(
-    "../../data/trajectories", design, model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, model, robot, "ilqr_1/trajectory.csv"
 )
 
 # simulation parameter

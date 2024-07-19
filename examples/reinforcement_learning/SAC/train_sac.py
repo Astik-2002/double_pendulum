@@ -36,7 +36,7 @@ if robot == "pendubot":
     # design A.0
     # design = "design_A.0"
     # model = "model_2.0"
-    # load_path = "../../../data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
+    # load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
     # warm_start_path = ""
     # Q = np.zeros((4, 4))
     # Q[0, 0] = 8.0
@@ -51,7 +51,7 @@ if robot == "pendubot":
     # design C.1
     design = "design_C.1"
     model = "model_1.0"
-    load_path = "../../../data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
+    load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
     warm_start_path = ""
     # define para for quadratic reward
     Q = np.zeros((4, 4))
@@ -71,7 +71,7 @@ elif robot == "acrobot":
     # design C.0
     # design = "design_C.0"
     # model = "model_3.0"
-    # load_path = "../../../data/controller_parameters/design_C.0/acrobot/lqr/roa"
+    # load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.0/acrobot/lqr/roa"
     # warm_start_path = ""
     # Q = np.zeros((4, 4))
     # Q[0, 0] = 10.0
@@ -86,7 +86,7 @@ elif robot == "acrobot":
     # design C.1
     design = "design_C.1"
     model = "model_1.0"
-    load_path = "../../../data/controller_parameters/design_C.1/model_1.1/acrobot/lqr/"
+    load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/acrobot/lqr/"
     warm_start_path = ""
     # define para for quadratic reward
     Q = np.zeros((4, 4))
@@ -100,7 +100,7 @@ elif robot == "acrobot":
     r_lqr = 1e5
 
 model_par_path = (
-        "../../../data/system_identification/identified_parameters/"
+        "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
         + design
         + "/"
         + model

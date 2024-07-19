@@ -15,36 +15,36 @@ os.makedirs(save_dir)
 
 # recorded data from robot
 # measured_data_csv = [
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_00.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_01.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_02.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_03.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_04.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_05.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_06.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_07.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_08.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_09.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_10.csv",  # exitation traj
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_11.csv",  # swingup traj
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_12.csv",
-#     "../../data/experiment_records/design_A.0/20220815/sys_id/trajectory_13.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_00.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_01.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_02.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_03.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_04.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_05.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_06.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_07.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_08.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_09.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_10.csv",  # exitation traj
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_11.csv",  # swingup traj
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_12.csv",
+#     "/home/astik/double_pendulum/data/experiment_records/design_A.0/20220815/sys_id/trajectory_13.csv",
 #     ]
 measured_data_csv = [
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_00.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_01.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_02.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_03.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_04.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_05.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_06.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_07.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_08.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_09.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_10.csv",  # exitation traj
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_11.csv",  # swingup traj
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_12.csv",
-    "../../data/experiment_records/design_C.0/20220914/sys_id/trajectory_13.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_00.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_01.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_02.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_03.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_04.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_05.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_06.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_07.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_08.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_09.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_10.csv",  # exitation traj
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_11.csv",  # swingup traj
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_12.csv",
+    "/home/astik/double_pendulum/data/experiment_records/design_C.0/20220914/sys_id/trajectory_13.csv",
     ]
 
 

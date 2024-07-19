@@ -151,7 +151,7 @@ titles.append("PFL")
 model_titles.append(model_str2)
 
 
-plt.style.use("../../data/other/latexstyle.mplstyle")
+plt.style.use("/home/astik/double_pendulum/data/other/latexstyle.mplstyle")
 
 SMALL_SIZE = 26
 MEDIUM_SIZE = 30

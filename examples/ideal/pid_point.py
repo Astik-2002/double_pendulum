@@ -15,7 +15,7 @@ robot = "double_pendulum"
 torque_limit = [5.0, 5.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model

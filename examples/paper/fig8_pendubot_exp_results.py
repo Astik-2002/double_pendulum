@@ -192,9 +192,9 @@ def plot_timeseries(T, X=None, U=None, ACC=None, energy=None,
 
 
 
-traj = load_trajectory_full("../../data/experiment_records/design_A.0/20220819/175617-pendubot_tvlqr_lqr_VIDEO/trajectory.csv")
+traj = load_trajectory_full("/home/astik/double_pendulum/data/experiment_records/design_A.0/20220819/175617-pendubot_tvlqr_lqr_VIDEO/trajectory.csv")
 end = 3000 # len(traj["X_meas"])
-T_des, X_des, U_des = load_trajectory("../../data/experiment_records/design_A.0/20220819/175617-pendubot_tvlqr_lqr_VIDEO/init_trajectory.csv")
+T_des, X_des, U_des = load_trajectory("/home/astik/double_pendulum/data/experiment_records/design_A.0/20220819/175617-pendubot_tvlqr_lqr_VIDEO/init_trajectory.csv")
 
 plot_timeseries(traj["T"][:end], traj["X_meas"][:end], traj["U_meas"][:end],
               pos_y_lines=[0.0, np.pi],

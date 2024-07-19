@@ -22,7 +22,7 @@ elif robot == "acrobot":
     torque_limit = [0.0, 5.0]
     active_act = 1
 
-model_par_path = "../../data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
 mpar = model_parameters(filepath=model_par_path)
 mpar.set_motor_inertia(0.)
 #mpar.set_damping([0., 0.])
@@ -30,7 +30,7 @@ mpar.set_cfric([0., 0.])
 mpar.set_torque_limit(torque_limit)
 
 ## trajectory parameters
-csv_path = os.path.join("../../data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv")
+csv_path = os.path.join("/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv")
 
 ## load reference trajectory
 T_des, X_des, U_des = load_trajectory(csv_path)

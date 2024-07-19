@@ -7,7 +7,7 @@ model = "model_3.1"
 robot = "acrobot"
 
 # data_dir = "data"
-data_dir = "../../data/benchmarks"
+data_dir = "/home/astik/double_pendulum/data/benchmarks"
 date_folder = False
 
 

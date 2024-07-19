@@ -4,7 +4,7 @@
     "gamma": 0.85,
     "replay_buffer_size": 200000,
     "n_initial_samples": 2000,
-    "n_epochs": 200,
+    "n_epochs": 100,
     "horizon": 1000,
     "n_training_steps_per_epoch": 25000,
     "n_training_steps_per_online_update": 1,

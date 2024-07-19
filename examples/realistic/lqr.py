@@ -18,7 +18,7 @@ from double_pendulum.filter.lowpass import lowpass_filter
 
 SAVE = "save" in sys.argv
 PLOT = "plot" in sys.argv
-ANIMATE = "animate" in sys.argv
+ANIMATE = True
 
 # model parameters
 design = "design_C.0"
@@ -37,7 +37,7 @@ else:
     active_act = 1
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
@@ -82,7 +82,7 @@ filter_velocity_cut = 0.0
 
 if robot == "acrobot":
     x0 = [np.pi + 0.1, -0.4, 0.0, 0.0]
-    Q = np.diag([0.64, 0.99, 0.78, 0.64])
+    Q = np.diag([1.2, 0.99, 0.78, 0.78])
     R = np.eye(2) * 0.27
 
 elif robot == "pendubot":

@@ -26,7 +26,7 @@ torque_limit = [0.0, 6.0]
 
 # init trajectory
 init_csv_path = os.path.join(
-    "../../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 # LQR controller

@@ -35,7 +35,7 @@ if robot == "pendubot":
     torque_limit = [5.0, 0.0]
     design = "design_C.1"
     model = "model_1.0"
-    load_path = "../../../data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
+    load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/pendubot/lqr/"
     warm_start_path = ""
     # define para for quadratic reward
     Q = np.zeros((4, 4))
@@ -52,7 +52,7 @@ elif robot == "acrobot":
     torque_limit = [0.0, 5.0]
     design = "design_C.1"
     model = "model_1.0"
-    load_path = "../../../data/controller_parameters/design_C.1/model_1.1/acrobot/lqr/"
+    load_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/acrobot/lqr/"
     warm_start_path = ""
     # define para for quadratic reward
     Q = np.zeros((4, 4))
@@ -67,7 +67,7 @@ elif robot == "acrobot":
 
 # define model parameter path
 model_par_path = (
-        "../../../data/system_identification/identified_parameters/"
+        "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
         + design
         + "/"
         + model

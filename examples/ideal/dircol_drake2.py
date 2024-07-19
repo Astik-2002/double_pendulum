@@ -17,7 +17,7 @@ design = "design_A.0"
 model = "model_1.2"
 robot = "acrobot"
 
-urdf_path = "../../data/urdfs/design_A.0/model_1.0/"+robot+".urdf"
+urdf_path = "/home/astik/double_pendulum/data/urdfs/design_A.0/model_1.0/"+robot+".urdf"
 
 torque_limit = 6.0
 

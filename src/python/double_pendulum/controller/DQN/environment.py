@@ -28,16 +28,16 @@ if robot == "pendubot":
     torque_limit = [5.0, 0.0]
     design = "design_A.0"
     model = "model_2.0"
-    load_path = "../../../examples/reinforcement_learning/DQN/lqr_data/pendubot/lqr/roa"
+    load_path = "/home/astik/double_pendulum/examples/reinforcement_learning/DQN/lqr_data/pendubot/lqr/roa"
 
 elif robot == "acrobot":
     torque_limit = [0.0, 5.0]
     design = "design_C.0"
     model = "model_3.0"
-    load_path = "../../../examples/reinforcement_learning/DQN/lqr_data/acrobot/lqr/roa"
+    load_path = "/home/astik/double_pendulum/examples/reinforcement_learning/DQN/lqr_data/acrobot/lqr/roa"
 
 model_par_path = (
-    "../../../data/system_identification/identified_parameters/" + design + "/" + model + "/model_parameters.yml"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/" + design + "/" + model + "/model_parameters.yml"
 )
 
 mpar = model_parameters(filepath=model_par_path)
@@ -203,7 +203,7 @@ class Env(CustomEnv):
         return super().reset()
 
     def collect_random_samples(
-        self, sample_key: jax.random.PRNGKeyArray, replay_buffer: ReplayBuffer, n_samples: int, horizon: int
+        self, sample_key: jax.random.key(0), replay_buffer: ReplayBuffer, n_samples: int, horizon: int
     ) -> None:
         self.reset()
 

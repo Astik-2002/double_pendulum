@@ -21,7 +21,7 @@ stabilization = "lqr"
 
 torque_limit = [0.5, 5.0]
 
-model_par_path = "../../data/system_identification/identified_parameters/design_C.1/model_1.0/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/design_C.1/model_1.0/model_parameters.yml"
 mpar = model_parameters(filepath=model_par_path)
 
 mpar_con = model_parameters(filepath=model_par_path)
@@ -32,7 +32,7 @@ if friction_compensation:
 mpar_con.set_torque_limit(torque_limit)
 
 ## trajectory parameters
-csv_path = "../../data/trajectories/design_C.1/model_1.1/acrobot/ilqr_1/trajectory.csv"
+csv_path = "/home/astik/double_pendulum/data/trajectories/design_C.1/model_1.1/acrobot/ilqr_1/trajectory.csv"
 
 ## load reference trajectory
 T_des, X_des, U_des = load_trajectory(csv_path)
@@ -53,7 +53,7 @@ R = np.eye(2) * 0.82
 Qf = np.copy(Q)
 
 # lqr controller
-lqr_path = "../../data/controller_parameters/design_C.1/model_1.1/acrobot/lqr"
+lqr_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/acrobot/lqr"
 lqr_pars = np.loadtxt(os.path.join(lqr_path, "controller_par.csv"))
 Q_lqr = np.diag(lqr_pars[:4])
 R_lqr = np.diag([lqr_pars[4], lqr_pars[4]])

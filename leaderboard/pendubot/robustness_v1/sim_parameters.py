@@ -7,7 +7,7 @@ model = "model_2.0"
 robot = "pendubot"
 
 model_par_path = (
-    "../../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model

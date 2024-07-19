@@ -16,7 +16,7 @@ torque_limit = [5.0, 0.5]
 torque_limit_con = [5.0, 0.0]
 friction_compensation = True
 
-model_par_path = "../../data/system_identification/identified_parameters/design_C.1/model_1.0/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/design_C.1/model_1.0/model_parameters.yml"
 mpar = model_parameters(filepath=model_par_path)
 
 mpar_con = model_parameters(filepath=model_par_path)
@@ -27,7 +27,7 @@ if friction_compensation:
 mpar_con.set_torque_limit(torque_limit_con)
 
 ## trajectory parameters
-csv_path = "../../data/trajectories/design_C.1/model_1.1/pendubot/ilqr_1/trajectory.csv"
+csv_path = "/home/astik/double_pendulum/data/trajectories/design_C.1/model_1.1/pendubot/ilqr_1/trajectory.csv"
 dt = 0.0025
 t_final = 10.0
 
@@ -40,7 +40,7 @@ lowpass_alpha = [1.0, 1.0, 0.2, 0.2]
 filter_velocity_cut = 0.1
 
 ## controller parameters
-lqr_path = "../../data/controller_parameters/design_C.1/model_1.1/pendubot/lqr"
+lqr_path = "/home/astik/double_pendulum/data/controller_parameters/design_C.1/model_1.1/pendubot/lqr"
 lqr_pars = np.loadtxt(os.path.join(lqr_path, "controller_par.csv"))
 Q_lqr = np.diag(lqr_pars[:4])
 R_lqr = np.diag([lqr_pars[4], lqr_pars[4]])

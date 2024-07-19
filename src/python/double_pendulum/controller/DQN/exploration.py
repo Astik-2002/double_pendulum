@@ -9,7 +9,7 @@ class EpsilonGreedySchedule:
         starting_eps: float,
         ending_eps: float,
         duration_eps: int,
-        key: jax.random.PRNGKeyArray,
+        key: jax.random.key(0),
         current_exploration_step: int,
     ) -> None:
         self.epsilon_schedule = optax.linear_schedule(starting_eps, ending_eps, duration_eps)

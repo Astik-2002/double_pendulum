@@ -17,7 +17,7 @@ robot = "double_pendulum"
 torque_limit_simulation = [10.0, 10.0]
 torque_limit_controller = [2.0, 0.5]
 
-model_par_path = "../../data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
 
 mpar = model_parameters()
 mpar.load_yaml(model_par_path)

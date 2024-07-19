@@ -21,7 +21,7 @@ if robot == "acrobot":
 if robot == "pendubot":
     torque_limit = [6.0, 0.0]
 
-model_par_path = "../../data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/"+design+"/"+model+"/model_parameters.yml"
 mpar = model_parameters(filepath=model_par_path)
 mpar.set_motor_inertia(0.)
 mpar.set_damping([0., 0.])
@@ -50,7 +50,7 @@ break_cost_redu = 1e-6
 trajectory_stabilization = True
 shifting = 1
 
-init_csv_path = os.path.join("../../data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv")
+init_csv_path = os.path.join("/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_2/trajectory.csv")
 
 if robot == "acrobot":
     sCu = [.1, .1]

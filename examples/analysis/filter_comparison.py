@@ -19,7 +19,7 @@ from double_pendulum.filter.running_mean import runningmean_filter
 from double_pendulum.filter.unscented_kalman import unscentedkalman_filter
 
 
-csv_path = "../../data/trajectories/design_B.0/model_1.2/acrobot/noisy_trajectory.csv"
+csv_path = "/home/astik/double_pendulum/data/trajectories/design_B.0/model_1.2/acrobot/noisy_trajectory.csv"
 # T, X, U = load_trajectory(csv_path, "numpy")
 
 data = np.loadtxt(csv_path, skiprows=1, delimiter=",")
@@ -46,7 +46,7 @@ cfric = [0.0, 0.0]
 motor_inertia = 0.0
 torque_limit = [0.0, 6.0]
 
-model_par_path = "../../data/system_identification/identified_parameters/design_B.0/model_h2.0/model_parameters.yml"
+model_par_path = "/home/astik/double_pendulum/data/system_identification/identified_parameters/design_B.0/model_h2.0/model_parameters.yml"
 mpar = model_parameters()
 mpar.load_yaml(model_par_path)
 mpar.set_motor_inertia(motor_inertia)

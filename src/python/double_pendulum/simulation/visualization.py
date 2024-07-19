@@ -2,10 +2,9 @@ import numpy as np
 from matplotlib.patches import Arc, RegularPolygon
 from numpy import radians as rad
 
-
 def get_arrow(radius, centX, centY, angle_, theta2_, color_="black"):
     """
-    Get circular arrow for visualizing motir torque.
+    Get circular arrow for visualizing motor torque.
 
     Parameters
     ----------
@@ -45,16 +44,15 @@ def get_arrow(radius, centX, centY, angle_, theta2_, color_="black"):
 
     endX = centX + (radius / 2) * np.cos(rad(theta2_ + angle_))
     endY = centY + (radius / 2) * np.sin(rad(theta2_ + angle_))
-
+    r1 = radius
     head = RegularPolygon(
         (endX, endY),  # (x,y)
-        3,  # number of vertices
-        radius / 20,  # radius
-        rad(angle_ + theta2_),  # orientation
+        numVertices=3,  # number of vertices
+        radius=r1 / 20,  # radius
+        orientation=rad(angle_ + theta2_),  # orientation
         color=color_,
     )
     return arc, head
-
 
 def set_arrow_properties(arc, head, tau, x, y):
     """

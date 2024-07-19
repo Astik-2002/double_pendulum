@@ -23,7 +23,7 @@ else:
     torque_limit = [6.0, 6.0]
 
 model_par_path = (
-    "../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model[:-1]
@@ -67,7 +67,7 @@ trajectory_stabilization = True
 shifting = 1
 
 init_csv_path = os.path.join(
-    "../../data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
+    "/home/astik/double_pendulum/data/trajectories", design, traj_model, robot, "ilqr_1/trajectory.csv"
 )
 
 if robot == "acrobot":

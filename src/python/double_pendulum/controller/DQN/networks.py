@@ -17,7 +17,7 @@ class BaseQ:
         n_actions: int,
         gamma: float,
         network: nn.Module,
-        network_key: jax.random.PRNGKeyArray,
+        network_key: jax.random.key(0),
         learning_rate: float,
         n_training_steps_per_online_update: int,
     ) -> None:
@@ -62,7 +62,7 @@ class BaseQ:
 
         return params, optimizer_state, loss
 
-    def update_online_params(self, step: int, replay_buffer: ReplayBuffer, key: jax.random.PRNGKeyArray) -> jnp.float32:
+    def update_online_params(self, step: int, replay_buffer: ReplayBuffer, key: jax.random.key(0)) -> jnp.float32:
         if step % self.n_training_steps_per_online_update == 0:
             batch_samples = replay_buffer.sample_random_batch(key)
 
@@ -78,7 +78,7 @@ class BaseQ:
         raise NotImplementedError
 
     @partial(jax.jit, static_argnames="self")
-    def random_action(self, key: jax.random.PRNGKeyArray) -> jnp.int8:
+    def random_action(self, key: jax.random.key(0)) -> jnp.int8:
         return jax.random.choice(key, jnp.arange(self.n_actions)).astype(jnp.int8)
 
     def best_action(self, params: FrozenDict, state: jnp.ndarray, key: jax.random.PRNGKey) -> jnp.int8:
@@ -95,7 +95,7 @@ class DQN(BaseQ):
         n_actions: int,
         gamma: float,
         layers: Sequence[int],
-        network_key: jax.random.PRNGKeyArray,
+        network_key: jax.random.key(0),
         learning_rate: float,
         n_training_steps_per_online_update: int,
         n_training_steps_per_target_update: int,

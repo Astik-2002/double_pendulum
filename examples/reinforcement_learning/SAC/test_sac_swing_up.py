@@ -29,12 +29,12 @@ if robot == "pendubot":
 
     design = "design_A.0"
     model = "model_2.0"
-    model_path = "../../../data/policies/design_A.0/model_2.0/pendubot/SAC/sac_model"
+    model_path = "/home/astik/double_pendulum/data/policies/design_A.0/model_2.0/pendubot/SAC/sac_model"
     scaling_state = True
 
     # design = "design_C.1"
     # model = "model_1.0"
-    # model_path = "../../../data/policies/design_C.1/model_1.0/pendubot/SAC/sac_model.zip"
+    # model_path = "/home/astik/double_pendulum/data/policies/design_C.1/model_1.0/pendubot/SAC/sac_model.zip"
     # scaling_state = False
 
 elif robot == "acrobot":
@@ -43,17 +43,17 @@ elif robot == "acrobot":
 
     # design = "design_C.0"
     # model = "model_3.0"
-    # model_path = "../../../data/policies/design_C.0/model_3.0/acrobot/SAC/sac_model.zip"
+    # model_path = "/home/astik/double_pendulum/data/policies/design_C.0/model_3.0/acrobot/SAC/sac_model.zip"
     # scaling_state = True
 
     design = "design_C.1"
     model = "model_1.0"
     scaling_state = True
-    model_path = "../../../data/policies/design_C.1/model_1.0/acrobot/SAC/sac_model.zip"
+    model_path = "/home/astik/double_pendulum/data/policies/design_C.1/model_1.0/acrobot/SAC/sac_model.zip"
 
 # import model parameter
 model_par_path = (
-    "../../../data/system_identification/identified_parameters/"
+    "/home/astik/double_pendulum/data/system_identification/identified_parameters/"
     + design
     + "/"
     + model
